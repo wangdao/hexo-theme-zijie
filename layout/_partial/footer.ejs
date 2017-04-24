@@ -1,0 +1,38 @@
+<footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div>
+                &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> 
+                <% if (theme.icp.enable) { %>
+                    - <a href="http://www.miibeian.gov.cn/" target="_blank">
+                        <%= theme.icp.value %>
+                       </a>
+                <% } %>
+            </div>
+            <div>
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/wangdao/hexo-theme-zijie" target="_blank">Zijie</a> by wangdao
+            </div>
+        </div>
+        <% if (theme.visit_counter.on) { %>
+            <div class="visit">
+                <% if (theme.visit_counter.site_visit) { %>
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" ><%= theme.visit_counter.site_visit %>: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                <% } %>
+                <% if (theme.visit_counter.site_visit && theme.visit_counter.page_visit) { %>
+                    <span>, </span>
+                <% } %>
+                <% if (theme.visit_counter.page_visit) { %>
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"><%= theme.visit_counter.page_visit %>: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+</footer>

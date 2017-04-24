@@ -1,0 +1,8 @@
+
+    <script>
+        $(document).ready(function() {
+            var backgroundimg = "url(<%- config.root %>background/<%= theme.background.background_image %>)";
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
